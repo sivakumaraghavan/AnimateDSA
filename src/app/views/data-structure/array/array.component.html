@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h2><strong>Array</strong></h2>
+                <hr/>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <form [formGroup]="arrayVisualize">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label" for="array">Array</label>
+                                <div class="col-sm-6">
+                                    <input id="array" 
+                                        type="text" 
+                                        formControlName="array" 
+                                        placeholder="1,2,3,4,5,6,7,8,9"
+                                        class="form-control" />
+                                </div>
+                                <button class="btn btn-primary col-sm-3" 
+                                (click)="CreateArray()" type="button">Create</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-6">
+                        <app-visualize-array class="animate-box fadeInRight animated" *ngIf="array" [arrayInput]="array"></app-visualize-array>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
+

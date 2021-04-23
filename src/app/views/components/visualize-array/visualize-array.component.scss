@@ -1,0 +1,36 @@
+@import "~scss/style";
+#array-visualize {
+    padding-left: 10%;
+    padding-right: 10%;
+    .array {
+        display: inline-grid;
+        float: left;
+        width: 10%;
+        &__item {
+            padding: 10%;
+            text-align: center;
+            color: #413f3f;
+            background-color: #f1f2f7;
+            @include border(top, 1px, solid, $gray-700);
+            @include border(bottom, 1px, solid, $gray-700);
+            @include border(left, 1px, solid, $gray-700);
+        }
+        &:first-child {
+            >span {
+                border-top-left-radius: 40%;
+                border-bottom-left-radius: 40%;
+            }
+        }
+        &:last-child {
+            >span:first-child {
+                @include border(right, 1px, solid, $gray-700);
+                border-top-right-radius: 40%;
+                border-bottom-right-radius: 40%;
+            }
+        }
+        &__index {
+            text-align:center;
+            font-weight:400;
+        }
+    }
+}
