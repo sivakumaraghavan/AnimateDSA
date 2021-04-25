@@ -1,10 +1,10 @@
 {
-  "name": "animate-data-structure-and-algorithm",
+  "name": "visualize-dsa",
   "version": "1.0.0",
   "description": "Animate Data Structure and Algorithm",
   "author": {
     "name": "Sivakumar",
-    "url": "http://holeczek.pl",
+    "url": "http://sivakumaraghavan.github.io",
     "github": "https://github.com/sivakumaraghavan",
     "twitter": "https://twitter.com/sivakumarGR"
   },
@@ -14,7 +14,7 @@
   "scripts": {
     "ng": "ng",
     "postinstall": "ngcc --properties es2015 browser module main --first-only",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build --prod --aot --build-optimizer --common-chunk --vendor-chunk --optimization --progress",
     "test": "ng test",
     "lint": "ng lint",
@@ -46,6 +46,7 @@
     "ng2-charts": "^2.4.2",
     "ngx-bootstrap": "^6.2.0",
     "ngx-perfect-scrollbar": "^10.1.0",
+    "path": "^0.12.7",
     "rxjs": "^6.6.6",
     "simple-line-icons": "^2.5.5",
     "ts-helpers": "^1.1.2",
