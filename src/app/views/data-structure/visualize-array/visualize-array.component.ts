@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, EventEmitter, Output, AfterViewInit } from '@angular/core';
-import { $ } from 'protractor';
 import { ArrayOperationsService } from '../../../services/array-operations.service';
 import { Operations } from '../../model/Operations';
 @Component({

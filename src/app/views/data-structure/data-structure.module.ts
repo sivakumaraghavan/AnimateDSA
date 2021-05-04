@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { DataStructureRoutingModule } from './data-structure-routing.module';
 import { ArrayComponent } from './array/array.component';
-import { VisualizeArrayComponent } from '../components/visualize-array/visualize-array.component';
+import { VisualizeArrayComponent } from './visualize-array/visualize-array.component';
 
 @NgModule({
   declarations: [ArrayComponent, VisualizeArrayComponent],
