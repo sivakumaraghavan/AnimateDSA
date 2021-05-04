@@ -28,7 +28,11 @@ export const routes: Routes = [
       {
         path: 'dashboard',
         loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
-      }
+      },
+      {
+        path: 'interview-questions',
+        loadChildren: () => import('./views/interview-questions/interview-questions.module').then(m => m.InterviewQuestionsModule)
+      },
     ]
   }
 ];
