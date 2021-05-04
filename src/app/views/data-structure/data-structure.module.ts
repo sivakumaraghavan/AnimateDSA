@@ -6,9 +6,8 @@ import { DataStructureRoutingModule } from './data-structure-routing.module';
 import { ArrayComponent } from './array/array.component';
 import { VisualizeArrayComponent } from '../components/visualize-array/visualize-array.component';
 
-
 @NgModule({
-  declarations: [ArrayComponent,VisualizeArrayComponent],
+  declarations: [ArrayComponent, VisualizeArrayComponent],
   imports: [
     CommonModule,
     FormsModule,
