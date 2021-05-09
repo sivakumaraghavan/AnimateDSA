@@ -21,27 +21,27 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Linked List',
-    url: '/theme/typography',
+    url: '/data-structure/linked-list',
     icon: 'fa fa-list-ul'
   },
   {
     name: 'Stack',
-    url: '/theme/typography',
+    url: '/data-structure/stack',
     icon: 'fa fa-stack-exchange'
   },
   {
     name: 'Queue',
-    url: '/theme/typography',
+    url: '/data-structure/queue',
     icon: 'fa fa-quora'
   },
   {
     name: 'Hashing',
-    url: '/theme/typography',
+    url: '/data-structure/hashing',
     icon: 'fa fa-th-list'
   },
   {
     name: 'Matrix',
-    url: '/theme/typography',
+    url: '/data-structure/matrix',
     icon: 'fa fa-table'
   },
   {
@@ -50,33 +50,33 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Analysis of Algorithm',
-    url: '/base/forms',
+    url: '/algorithm/analysis-of-algorithm',
     icon: 'fa fa-hourglass-start'
   },
   {
     name: 'Searching',
-    url: '/base/cards',
+    url: '/algorithm/searching',
     icon: 'fa fa-search'
   },
   {
     name: 'Sorting',
-    url: '/base/carousels',
+    url: '/algorithm/sorting',
     icon: 'fa fa-sort-amount-asc'
   },
   {
     name: 'Divide & Conquer',
-    url: '/base/collapses',
+    url: '/algorithm/divide-conquer',
     icon: 'icon-puzzle'
   },
   {
     name: 'Backtracking',
-    url: '/base/navbars',
+    url: '/algorithm/backtracking',
     icon: 'fa fa-braille'
 
   },
   {
     name: 'Graph',
-    url: '/base/paginations',
+    url: '/algorithm/graph',
     icon: 'fa fa-line-chart'
   },
   {
@@ -93,47 +93,47 @@ export const navItems: INavData[] = [
     children: [
       {
         name: 'HTML',
-        url: '/html',
+        url: 'interview-questions/front-end/html',
         icon: 'devicon-html5-plain'
       },
       {
         name: 'CSS',
-        url: '/css',
+        url: 'interview-questions/front-end/css',
         icon: 'devicon-css3-plain'
       },
       {
         name: 'JavaScript',
-        url: '/javascript',
+        url: 'interview-questions/front-end/javascript',
         icon: 'devicon-javascript-plain'
       },
       {
         name: 'SASS',
-        url: '/sass',
+        url: 'interview-questions/front-end/sass',
         icon: 'devicon-sass-original'
       },
       {
         name: 'TypeScript',
-        url: '/typescript',
+        url: 'interview-questions/front-end/typescript',
         icon: 'devicon-typescript-plain'
       },
       {
         name: 'React',
-        url: '/sass',
+        url: 'interview-questions/front-end/react',
         icon: 'devicon-react-original'
       },
       {
         name: 'Angular',
-        url: '/sass',
+        url: 'interview-questions/front-end/angular',
         icon: 'devicon-angularjs-plain'
       },
       {
         name: 'Grunt',
-        url: '/grunt',
+        url: 'interview-questions/front-end/grunt',
         icon: 'devicon-grunt-line'
       },
       {
         name: 'Webpack',
-        url: '/webpack',
+        url: 'interview-questions/front-end/webpack',
         icon: 'devicon-webpack-plain'
       }
     ]
@@ -145,44 +145,44 @@ export const navItems: INavData[] = [
     children: [
       {
         name: 'C#',
-        url: '/csharp',
+        url: 'interview-questions/back-end/csharp',
         icon: 'devicon-csharp-plain'
       },
       {
         name: 'ADO.NET',
-        url: '/adonet',
+        url: 'interview-questions/back-end/adonet',
         icon: 'devicon-dot-net-plain'
       },
       {
         name: 'ASP.NET MVC',
-        url: '/aspnetmvc',
+        url: 'interview-questions/back-end/aspnetmvc',
         icon: 'devicon-dot-net-plain'
       },
       {
         name: 'ASP.NET Core',
-        url: '/aspnetcore',
+        url: 'interview-questions/back-end/aspnetcore',
         icon: 'devicon-dotnetcore-plain'
       },
       {
         name: 'NodeJS',
-        url: '/nodejs',
+        url: 'interview-questions/back-end/nodejs',
         icon: 'devicon-nodejs-plain'
       }
     ]
   },
   {
     name: 'MiddleWare',
-    url: '/front-end',
+    url: '/middleware',
     icon: 'fa fa-cogs',
     children: [
       {
         name: 'WebAPI',
-        url: '/csharp',
+        url: 'interview-questions/middleware/webapi',
         icon: 'fa fa-cogs'
       },
       {
         name: 'ExpressJS',
-        url: '/aspnetmvc',
+        url: 'interview-questions/back-end/expressjs',
         icon: 'devicon-express-original'
       }
     ]
@@ -194,12 +194,12 @@ export const navItems: INavData[] = [
     children: [
       {
         name: 'SQL SERVER',
-        url: '/sqlserver',
+        url: 'interview-questions/databases/sqlserver',
         icon: 'devicon-microsoftsqlserver-plain'
       },
       {
         name: 'MongoDB',
-        url: '/mongodb',
+        url: 'interview-questions/databases/mongodb',
         icon: 'devicon-mongodb-plain'
       }
     ]
@@ -211,12 +211,12 @@ export const navItems: INavData[] = [
     children: [
       {
         name: 'AWS',
-        url: '/aws',
+        url: 'interview-questions/cloudservrices/aws',
         icon: 'devicon-amazonwebservices-original'
       },
       {
         name: 'Azure',
-        url: '/azure',
+        url: 'interview-questions/cloudservrices/azure',
         icon: 'fa fa-cloud'
       }
     ]
