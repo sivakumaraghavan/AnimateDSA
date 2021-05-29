@@ -59,7 +59,7 @@ export class VisualizeArrayComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.array.pop();
       this.array = this.arrayOperations.Insert(this.array, value);
-    }, 3000);
+    }, 2000);
   }
 
   PerformInsertAtPosition(value: string, index: string) {

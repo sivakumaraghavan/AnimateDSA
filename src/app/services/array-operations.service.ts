@@ -15,9 +15,11 @@ export class ArrayOperationsService implements IArray {
     throw new Error('Method not implemented.');
   }
   Update(array: any[], oldValue: any, newValue: any): any[] {
-    throw new Error('Method not implemented.');
+    array[array.indexOf(oldValue)] = newValue;
+    return array;
   }
   Delete(array: any[], value: any): any[] {
-    throw new Error('Method not implemented.');
+    array.splice(array.indexOf(value), 1);
+    return array;
   }
 }

@@ -46,6 +46,9 @@ export class ArrayComponent implements OnInit {
   changeOperation($event: any) {
     this.IsPerformAction = false;
     this.arrayVisualize.controls.operations.setValue($event.target.value);
+    this.arrayVisualize.controls.arrayValue.reset();
+    this.arrayVisualize.controls.arrayIndex.reset();
+    this.arrayVisualize.controls.arrayUpdateValue.reset();
   }
 
   performArrayOperation() {
