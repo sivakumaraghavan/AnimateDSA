@@ -1,65 +1,68 @@
 <div class="row">
     <div class="col-md-12">
-        <div class="card">
+        <div class="card card-accent-primary">
+            <div class="card-header"><strong>Array</strong></div>
             <div class="card-body">
-                <h2><strong>Array</strong></h2>
-                <hr/>
+                <form id="array-form" class="row" [formGroup]="arrayVisualize">
+                    <div class="col-sm-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="array">Array</label>
+                            <div class="col-sm-6">
+                                <input id="array" type="text" formControlName="array" placeholder="1,2,3,4,5" class="form-control" />
+                            </div>
+                            <button class="btn btn-primary col-sm-3" 
+                            (click)="CreateArray()" type="button">Create</button>
+                        </div>
+                    </div> 
+                    <div *ngIf="performAction" class="col-sm-6">
+                        <div class="form-group row animated animate-box fadeInRight">
+                            <label class="col-sm-2 col-form-label" for="array">Action</label>
+                            <div class="col-sm-3">
+                                <select (change)="changeOperation($event)" formControlName="operations" class="form-control">
+                                    <option disabled selected>Select</option>
+                                    <option *ngFor="let item of keys(arrayOperations)" [value]="arrayOperations[item]">
+                                        {{item}}
+                                    </option>
+                                </select>
+                            </div>
+                            <div *ngIf="arrayVisualize.get('operations').value" class="col-sm-2">
+                                <input id="arrayValue" 
+                                type="text"                                        
+                                [placeholder]="arrayVisualize.get('operations').value=='3'?'old':'value'"
+                                formControlName="arrayValue"
+                                class="form-control" />
+                            </div>
+                            <div *ngIf="arrayVisualize.get('operations').value=='2'" class="col-sm-2">
+                                <input id="arrayIndex" 
+                                type="text"                                        
+                                placeholder="index"
+                                formControlName="arrayIndex"
+                                class="form-control" />
+                            </div>
+                            <div *ngIf="arrayVisualize.get('operations').value=='3'" class="col-sm-2">
+                                <input id="arrayUpdateValue" 
+                                type="text"                                        
+                                placeholder="new"
+                                formControlName="arrayUpdateValue"
+                                class="form-control" />
+                            </div>
+                            <button class="btn btn-primary col-sm-2" 
+                            (click)="performArrayOperation()" type="button"
+                            [disabled]="arrayVisualize.get('operations').value?false:true">GO</button>
+                        </div>
+                    </div>  
+                </form>
                 <div class="row">
-                    <div class="col-sm-6">
-                        <form id="array-form" [formGroup]="arrayVisualize">
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label" for="array">Array</label>
-                                <div class="col-sm-6">
-                                    <input id="array" 
-                                        type="text" 
-                                        formControlName="array" 
-                                        placeholder="1,2,3,4,5,6,7,8,9"
-                                        class="form-control" />
-                                </div>
-                                <button class="btn btn-primary col-sm-3" 
-                                (click)="CreateArray()" type="button">Create</button>
-                            </div>
-                            <div *ngIf="performAction">
-                                <h4 class="animated animate-box fadeInRight">Perform Operations</h4>
-                                <div class="form-group row animated animate-box fadeInLeft">
-                                    <label class="col-sm-2 col-form-label" for="array">Action</label>
-                                    <div class="col-sm-3">
-                                        <select (change)="changeOperation($event)" formControlName="operations" class="form-control">
-                                            <option disabled selected>Select</option>
-                                            <option *ngFor="let item of keys(arrayOperations)" [value]="arrayOperations[item]">
-                                                {{item}}
-                                            </option>
-                                        </select>
-                                    </div>
-                                    <div *ngIf="arrayVisualize.get('operations').value" class="col-sm-2">
-                                        <input id="arrayValue" 
-                                        type="text"                                        
-                                        [placeholder]="arrayVisualize.get('operations').value=='3'?'old':'value'"
-                                        formControlName="arrayValue"
-                                        class="form-control" />
-                                    </div>
-                                    <div *ngIf="arrayVisualize.get('operations').value=='2'" class="col-sm-2">
-                                        <input id="arrayIndex" 
-                                        type="text"                                        
-                                        placeholder="index"
-                                        formControlName="arrayIndex"
-                                        class="form-control" />
-                                    </div>
-                                    <div *ngIf="arrayVisualize.get('operations').value=='3'" class="col-sm-2">
-                                        <input id="arrayUpdateValue" 
-                                        type="text"                                        
-                                        placeholder="new"
-                                        formControlName="arrayUpdateValue"
-                                        class="form-control" />
-                                    </div>
-                                    <button class="btn btn-primary col-sm-2" 
-                                    (click)="performArrayOperation()" type="button"
-                                    [disabled]="arrayVisualize.get('operations').value?false:true">GO</button>
-                                </div>
-                            </div>
-                        </form>
+                    <div class="col-sm-6" >
+                        <div class="pt-2">
+                            <h5 *ngIf="IsArrayCreated" class="pt-2">Code Snippet</h5>
+                            <img *ngIf="IsArrayCreated && !IsPerformAction" class="img-fluid mx-auto d-block" 
+                                 src="../../../../assets/img/code-snippets/array.png" />
+                            <img *ngIf="IsPerformAction && arrayVisualize.get('operations').value==2" class="img-fluid mx-auto d-block"
+                                 src="../../../../assets/img/code-snippets/array-insert.png" />
+                        </div>
                     </div>
-                    <div class="col-sm-6">
+                    <div id="visualize" class="col-sm-6">
                         <app-visualize-array 
                             class="animate-box fadeInRight animated" 
                             *ngIf="array" [arrayInput]="array" 

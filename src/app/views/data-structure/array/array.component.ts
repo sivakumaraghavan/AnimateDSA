@@ -37,6 +37,7 @@ export class ArrayComponent implements OnInit {
   CreateArray() {
     this.array = '';
     this.array = this.arrayVisualize.controls.array.value;
+    this.IsArrayCreated = true;
   }
 
   performArrayOperations(isArrayCreated: Boolean) {
