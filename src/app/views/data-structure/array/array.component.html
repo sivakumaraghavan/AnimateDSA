@@ -71,7 +71,7 @@
                             [arrayValue]="arrayVisualize.get('arrayValue').value"
                             [arrayIndex]="arrayVisualize.get('arrayIndex').value"
                             [performOperation]="IsPerformAction"
-                            (arrayCreated)='performArrayOperations($event)'>
+                            (arrayCreated)='arrayVisualizationCompleted($event)'>
                         </app-visualize-array>
                     </div>
                 </div>

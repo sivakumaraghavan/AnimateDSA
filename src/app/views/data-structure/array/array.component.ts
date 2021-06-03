@@ -40,7 +40,7 @@ export class ArrayComponent implements OnInit {
     this.IsArrayCreated = true;
   }
 
-  performArrayOperations(isArrayCreated: Boolean) {
+  arrayVisualizationCompleted(isArrayCreated: Boolean) {
     this.performAction = isArrayCreated;
   }
 
